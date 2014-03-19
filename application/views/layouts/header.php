@@ -35,7 +35,7 @@
 
     <div id="unmark-wrapper">
 
-    <a id="mobile-sidebar-show" alt="View/Hide Details" href="#"><i class="icon-ellipsis"></i></a>
+    <a id="mobile-sidebar-show" alt="View/Hide Details" href="#"><i class="icon-bell"></i></a>
 
     <div class="branding"><div class="icon-logo_text_white logo-text"></div></div>
 
