@@ -34,10 +34,6 @@
 	background-image: url('icons/heading_archive.png');
 	background-repeat: no-repeat;
 }
-.icon-heading_close {
-	background-image: url('icons/heading_close.png');
-	background-repeat: no-repeat;
-}
 .icon-heading_collapse {
 	background-image: url('icons/heading_collapse.png');
 	background-repeat: no-repeat;
@@ -168,5 +164,9 @@
 }
 .icon-bell {
 	background-image: url('png/bell.png');
+	background-repeat: no-repeat;
+}
+.icon-heading_close {
+	background-image: url('icons/heading_close.png');
 	background-repeat: no-repeat;
 }

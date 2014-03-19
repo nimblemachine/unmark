@@ -7,24 +7,27 @@
 
 	$(document).ready(function () {
 
+		/*
 		// Toggle the Mobile Navigation
 		unmark.mobile_nav = function (hide) {
 			if (hide) {
 				if (Modernizr.mq('only screen and (max-width: 480px)')) {
-					$('.main-wrapper').animate({left: 0}, 400);
-					$('.navigation-content').animate({left: '-64'}, 400);
-					$('.navigation-content .menu-activator').animate({left: 62}, 400);
+					$('.main-wrapper').animate({left: 0}, 200);
+					$('.navigation-content').animate({left: '-64'}, 200);
+					$('.navigation-content .menu-activator').animate({left: 62}, 200);
 				}
 				$('.menu-item').removeClass('active-menu');
 			} else {
 				$('.mark-actions').hide();
-				$('.main-wrapper').animate({left: 65}, 400);
-				$('.navigation-content').animate({left: 0}, 400);
-				$('.navigation-content .menu-activator').animate({left: 0}, 400);
+				$('.main-wrapper').animate({left: 65}, 200);
+				$('.navigation-content').animate({left: 0}, 200);
+				$('.navigation-content .menu-activator').animate({left: 0}, 200);
 				unmark.mobile_sidebar(true); // Hide Mobile Sidebar
 			}
 		};
+		*/
 
+		/*
 		// Toggle the Mobile Sidebar
 		unmark.mobile_sidebar = function (hide) {
 			if (hide) {
@@ -38,6 +41,22 @@
 				unmark.mobile_nav(true); // Hide Mobile Nav
 			}
 		}
+		*/
+
+		// Toggle the Mobile Sidebar ///// ~~~~~ TEST ~~~~~ /////
+		$('#mobile-sidebar-show').click(function() {	
+			$('.sidebar-content').toggleClass('expanded'); 
+			$('a#mobile-sidebar-show i').toggleClass('icon-heading_close');
+			$('.main-content').toggleClass('left'); 
+		});
+
+		$('#mobile-nav-show').click(function() {	
+			$('.navigation-content').toggleClass('expanded'); 
+			$('a#mobile-nav-show i').toggleClass('icon-menu_close');
+			$('.main-content').toggleClass('right'); 
+		});
+		
+
 
 		// For Small Phone Size Devices
 		if (Modernizr.mq('only screen and (max-width: 480px)')) {
@@ -49,6 +68,7 @@
 				if (open === '65px') { unmark.mobile_nav(true); } else { unmark.mobile_nav(); }
 			});
 
+			/*
 			// Mobile Show Sidebar
 			$('#mobile-sidebar-show').on('click', function (e) {
 				e.preventDefault();
@@ -56,6 +76,7 @@
 				if (open === '0px') { unmark.mobile_sidebar(true); } else { unmark.mobile_sidebar(); }
 				$('.mark-actions').hide();
 			});
+			*/
 
 			// Set Max width for view of sidebar expand.
 			// Since they are parsed on the fly, we need to update the DOM
