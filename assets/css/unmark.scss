@@ -1973,11 +1973,18 @@ button.upgradeNowSidebar {
     }
     .navigation-pane {
         margin-top: 54px;
-        z-index: 203;
+        z-index: 201;
         ul {
             &.navigation-pane-links {
                 li {
                     height: 50px;
+                    a {
+                        height: 50px;
+                        padding: 12px 0 12px 3px;
+                    }
+                    &.panel-settings {
+                        bottom: 55px;
+                    }
                 }
             }
         }
@@ -2025,7 +2032,7 @@ button.upgradeNowSidebar {
         right: -85%;
         padding-right:0;
         display: none;
-        border-left: 1px solid $color_light;
+        border-left: 1px solid transparentize($color_light, 0.2);
     }
     #mobile-sidebar-show { display: block; }
     #mobile-nav-show { display: block; }
@@ -2075,7 +2082,11 @@ button.upgradeNowSidebar {
 
     //////////////////////////////////// Mobile Sliding 
 
-
+    .main-wrapper {
+        .inner-wrapper {
+            overflow-x: hidden;
+        }
+    }
     .sidebar-content {
         width: 80% !important;
         left: 100%;
@@ -2106,9 +2117,18 @@ button.upgradeNowSidebar {
         &.expanded {
             left: 0;
         }
+        .menu-settings {
+            bottom: 55px;
+        }
     }
     .navigation-pane {
         width: 80%;
-        left: 65px;
+        left: -80%;
+        -webkit-transition: left 0.2s ease-in-out;
+        transition: left 0.2s ease-in-out;
+        &.expanded {
+            left: 0;
+            margin-left: 52px;
+        }
     }
 }

@@ -1023,18 +1023,39 @@ if (unmark === undefined) { var unmark = {}; }
 		}
 		*/
 
-		// Toggle the Mobile Sidebar ///// ~~~~~ TEST ~~~~~ /////
+
+/////////// Experimental Sliding Functionality 
+
 		$('#mobile-sidebar-show').click(function() {	
-			$('.sidebar-content').toggleClass('expanded'); 
+
+			// Clear Nav 
+			$('.navigation-pane').removeClass('expanded'); 
+			$('.navigation-content').removeClass('expanded'); 
+			$('.main-content').removeClass('right');
+
+			// Toggle Sidebar
+			$('.sidebar-content').toggleClass('expanded');
+			$('a#mobile-nav-show i').toggleClass('icon-menu_close');
 			$('a#mobile-sidebar-show i').toggleClass('icon-heading_close');
 			$('.main-content').toggleClass('left'); 
+			
 		});
 
 		$('#mobile-nav-show').click(function() {	
+
+			// Clear Sidebar
+			$('.sidebar-content').removeClass('expanded'); 
+			$('a#mobile-sidebar-show i').removeClass('icon-heading_close');
+			$('.main-content').removeClass('left'); 
+
+			// Toggle Nav
 			$('.navigation-content').toggleClass('expanded'); 
+			$('.navigation-pane').toggleClass('expanded'); 
 			$('a#mobile-nav-show i').toggleClass('icon-menu_close');
 			$('.main-content').toggleClass('right'); 
+			
 		});
+
 		
 
 
