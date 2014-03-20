@@ -2034,7 +2034,12 @@ button.upgradeNowSidebar {
         display: none;
         border-left: 1px solid transparentize($color_light, 0.2);
     }
-    #mobile-sidebar-show { display: block; }
+    #mobile-sidebar-show { 
+        display: block; 
+        i.icon-heading_close {
+            background-size: 70%;
+        }
+    }
     #mobile-nav-show { display: block; }
     .navigation-content .menu-activator {
         position: absolute;
@@ -2131,4 +2136,39 @@ button.upgradeNowSidebar {
             margin-left: 52px;
         }
     }
+    .marks_list {
+        overflow-x: hidden;
+        .mark {
+            left: 0;
+            -webkit-transition: left 0.1s ease-in-out;
+            transition: left 0.1s ease-in-out;
+            &.expanded {
+                left: -180px;
+            }  
+            .mark-actions {
+                width: 180px;
+                right: -180px;
+                -webkit-transition: right 0.1s ease-in-out;
+                transition: right 0.1s ease-in-out;
+                display: block;
+                &.expanded {
+                    right: 0;
+                }
+            }
+            .mark-actions {
+                a {
+                    &.mark-archive {
+                        background: lighten($color_grey, 7%);
+                    }
+                }
+            }
+            &.label-2 .mark-actions a.mark-archive { background: lighten($color_orange, 7%); }
+            &.label-3 .mark-actions a.mark-archive { background: lighten($color_blue, 7%); }
+            &.label-4 .mark-actions a.mark-archive { background: $color_yellow; }
+            &.label-5 .mark-actions a.mark-archive { background: lighten($color_purple, 7%); }
+            &.label-6 .mark-actions a.mark-archive { background: lighten($color_green, 7%); }
+            &.label-7 .mark-actions a.mark-archive { background: lighten($color_pink, 7%); }
+        }
+    }
+    
 }

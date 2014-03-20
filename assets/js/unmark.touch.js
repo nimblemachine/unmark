@@ -76,7 +76,17 @@
 			
 		});
 
+		if (Modernizr.mq('only screen and (max-width: 480px)')) {
+
+			// Slide Mark & Action Buttons Over
+			$('.marks_list .mark').click(function() {
+				//$(this).children('.mark-actions').toggleClass('expanded');
+				$(this).toggleClass('expanded');
+			});
+
+		}
 		
+///////////////////////////////		
 
 
 		// For Small Phone Size Devices
@@ -110,6 +120,7 @@
 			// Unbind the Hover State for Marks in List as well as click
 			$(document).off('mouseenter mouseleave click', '.mark');
 
+			/*
 			// Hide / Show Mark Actions on Mobile when swiping
 			$(document).on('click', '.mark', function(e) {
 				//e.preventDefault();
@@ -117,6 +128,7 @@
 				$(this).find('.mark-actions').show();
 				unmark.mobile_nav(true);
 			});
+			*/
 
 
 		}

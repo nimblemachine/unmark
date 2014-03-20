@@ -62,12 +62,12 @@
 	background-image: url('icons/links.png');
 	background-repeat: no-repeat;
 }
-.icon-menu_close {
-	background-image: url('icons/menu_close.png');
-	background-repeat: no-repeat;
-}
 .icon-menu_open {
 	background-image: url('icons/menu_open.png');
+	background-repeat: no-repeat;
+}
+.icon-menu_close {
+	background-image: url('icons/menu_close.png');
 	background-repeat: no-repeat;
 }
 .icon-option_down {
