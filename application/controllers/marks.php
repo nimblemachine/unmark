@@ -188,6 +188,11 @@ class Marks extends Plain_Controller
                 $tags = getTagsFromHash($options['notes']);
             }
 
+            // If notes are present set them
+            if (isset($this->db_clean->title)) {
+                $options['title'] = (empty($this->db_clean->title)) ? null : $this->db_clean->title;
+            }
+
             // If tags are present, handle differentlu
             // Need to add to tags table first
             // Then create association
