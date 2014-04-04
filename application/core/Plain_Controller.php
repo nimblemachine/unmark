@@ -2,7 +2,7 @@
 
 class Plain_Controller extends CI_Controller
 {
-        
+
     public $clean          = null;
     public $csrf_valid     = false;
     public $current_user   = array();
@@ -36,12 +36,12 @@ class Plain_Controller extends CI_Controller
 
         // Clean incoming variables in a variety of ways
         $this->clean();
-        
+
         if($this->localized && $this->selected_language === null){
             // Set list of supported languages for the app and pick selected
             $this->getLanguageFromConfig();
         }
-        
+
         // Get user token
         $this->getUserInfo();
 
@@ -64,7 +64,7 @@ class Plain_Controller extends CI_Controller
 
         // Figure the url and title
         $url   = (isset($data['url'])) ? $data['url'] : null;
-        $title = (isset($data['title'])) ? $data['title'] : null;
+        $title = (isset($data['title'])) ? $data['title'] : 'No Title';
 
         // If url or title are empty
         // error out
@@ -325,7 +325,7 @@ class Plain_Controller extends CI_Controller
         $this->logged_in     = (isset($this->session)) ? $this->session->userdata('logged_in') : false;
         $this->current_user  = (! empty($user_session)) ? $user_session : $this->current_user;
     }
-    
+
     protected function isAdmin()
     {
         return $this->user_admin;
@@ -585,7 +585,7 @@ class Plain_Controller extends CI_Controller
             $this->load->view('partials/debug', $data);
         }
     }
-    
+
     /**
      * Determines language selection based on configuration file
      */
